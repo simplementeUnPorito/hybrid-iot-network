@@ -1,7 +1,6 @@
-<p align="center"><img src="NodeRed/node-red-dashboard.jpg" width="720" alt="Node-RED dashboard fed by TTN uplinks"></p>
-<h1 align="center">Hybrid Wi-Fi + LoRaWAN IoT Platform</h1>
-<p align="center"><b>A reusable IoT network where Wi-Fi and LoRaWAN nodes feed one MQTT, InfluxDB and Home Assistant backend.</b><br>
-<img src="https://img.shields.io/badge/ESPHome-ESP32%20%7C%20ESP8266-1f6feb"> <img src="https://img.shields.io/badge/LoRaWAN-TTN-orange"> <img src="https://img.shields.io/badge/MQTT-Mosquitto-660066"> <img src="https://img.shields.io/badge/InfluxDB-Grafana-22adf6"> <img src="https://img.shields.io/badge/Home%20Assistant-Node--RED-41bdf5"> <img src="https://img.shields.io/badge/Docker-2496ed"></p>
+<p align="center"><img src="docs/img/banner.svg" width="100%" alt="Hybrid Wi-Fi + LoRaWAN IoT Platform"></p>
+
+<p align="center"><img src="https://img.shields.io/badge/ESPHome-ESP32%20%7C%20ESP8266-1f6feb"> <img src="https://img.shields.io/badge/LoRaWAN-TTN-orange"> <img src="https://img.shields.io/badge/MQTT-Mosquitto-660066"> <img src="https://img.shields.io/badge/InfluxDB-Grafana-22adf6"> <img src="https://img.shields.io/badge/Home%20Assistant-Node--RED-41bdf5"> <img src="https://img.shields.io/badge/Docker-2496ed"></p>
 <p align="center"><a href="#english">English</a> · <a href="#español">Español</a></p>
 
 ## English
