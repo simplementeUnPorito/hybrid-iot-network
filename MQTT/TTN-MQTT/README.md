@@ -8,7 +8,7 @@ En el flujo de datos ascendente, cuando un nodo LoRa transmite un paquete LoRaWA
 
 Los servicios externos o servidores MQTT pueden suscribirse a estos topics y recibir los mensajes en formato JSON. Desde el punto de vista del cliente, este mecanismo se comporta de manera similar a un esquema clásico de publicación–suscripción, donde TTN actúa como publicador y los servicios externos como suscriptores.
 
-Debido a que el uplink constituye un flujo pasivo de información —los datos ya han sido generados por el nodo y solo deben ser consumidos—, la integración resulta estable y directa. Esto permite que plataformas como Home Assistant, InfluxDB o Node-RED consuman los datos sin necesidad de transformaciones complejas ni lógica adicional en el backend.
+Debido a que el uplink constituye un flujo pasivo de información, los datos ya han sido generados por el nodo y solo deben ser consumidos, , la integración resulta estable y directa. Esto permite que plataformas como Home Assistant, InfluxDB o Node-RED consuman los datos sin necesidad de transformaciones complejas ni lógica adicional en el backend.
 
 ### Comunicación descendente (downlink)
 
@@ -26,7 +26,7 @@ Como consecuencia, los mensajes de control enviados de forma directa no eran ace
 
 ### Uso de middleware para la comunicación descendente
 
-Para resolver esta limitación, se incorporó un middleware —en este caso Node-RED— entre el servidor MQTT local y TTN. Este middleware actúa como cliente MQTT de TTN y se encarga de adaptar los comandos de control a la estructura exacta requerida por el backend LoRaWAN. De este modo, Node-RED construye el mensaje JSON correspondiente, selecciona el puerto lógico adecuado y publica el downlink utilizando los mecanismos de autenticación correctos.
+Para resolver esta limitación, se incorporó un middleware, en este caso Node-RED, entre el servidor MQTT local y TTN. Este middleware actúa como cliente MQTT de TTN y se encarga de adaptar los comandos de control a la estructura exacta requerida por el backend LoRaWAN. De este modo, Node-RED construye el mensaje JSON correspondiente, selecciona el puerto lógico adecuado y publica el downlink utilizando los mecanismos de autenticación correctos.
 
 Esta solución permite mantener la simplicidad del control a nivel de Home Assistant o del servidor MQTT local, al mismo tiempo que se respetan las restricciones y la semántica del protocolo LoRaWAN impuestas por TTN.
 

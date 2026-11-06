@@ -17,7 +17,7 @@ Esto es útil cuando:
 
 ---
 
-## Programa 1 — Envío de ON y OFF
+## Programa 1: Envío de ON y OFF
 
 Este programa envía en un bucle:
 
@@ -30,7 +30,7 @@ Incluye mensajes por Serial (115200) para ver cuándo se envía cada comando.
 
 ---
 
-## Programa 2 — Envío de ON (dos frames)
+## Programa 2: Envío de ON (dos frames)
 
 Este programa envía únicamente el comando **ON**, en dos partes:
 
@@ -81,7 +81,7 @@ reproduce exactamente esa temporización.
 
 ---
 
-## Programa 3 — Sensor HC-SR04
+## Programa 3: Sensor HC-SR04
 
 Este conjunto de scripts permite medir la distancia de objetos utilizando un sensor de ultrasonido **HC-SR04** conectado a un **ESP8266**, enviando los datos en tiempo real a un broker **MQTT** a través de Wi-Fi.
 
