@@ -240,7 +240,7 @@ En la sección de Wi-Fi, asegurarse de que esté configurada de la siguiente man
 ```yaml
 wifi:
   ssid: "AQUI_VA_EL_NOMBRE_EXACTO_DE_TU_WIFI"
-  password: "AQUI_VA_LA_CONTRASEÑA_EXACTA_DE_TU_WIFI"
+  password: "<WIFI_PASSWORD>"
   min_auth_mode: WPA2  # Añadido para estabilidad
 ```
 
