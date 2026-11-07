@@ -98,7 +98,7 @@ Secrets (Wi-Fi credentials, TTN keys, bot tokens, server IPs) were removed from 
 - Air-conditioner on/off automations in Home Assistant (`homeassistant/Control_de_AACC/Automations/`).
 
 ### Team & credits
-Developed by Elías David Álvarez Martínez (ESP32 sensor/IR node, AC control, scripts), Matías (ESP8266 virtual node, ultrasonic sensor and IR scripts), Erick Wu (Docker stack, perfume dispenser, step-by-step guide), Víctor Joel Cañete Barboza (LoRaWAN LDR/DHT11/IR node, guide) and Tania (LoRaWAN humidity/servo/valve node, guide) at Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, with Eng. Fernando Brunetti, PhD, as advisor.
+Developed by Elías David Álvarez Martínez (ESP32 sensor/IR node, AC control, scripts), Matías Franco (ESP8266 virtual node, ultrasonic sensor and IR scripts), Erick Wu (Docker stack, perfume dispenser, step-by-step guide), Víctor Joel Cañete Barboza (LoRaWAN LDR/DHT11/IR node, guide) and Tania Romero (LoRaWAN humidity/servo/valve node, guide) at Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, with Eng. Fernando Brunetti, PhD, as advisor.
 
 ### License
 MIT. Technical guides and figures are shared for reference.
