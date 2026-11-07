@@ -8,6 +8,17 @@
 ### Overview
 This project combines sensing and actuation in a hybrid IoT network with two radio technologies: Wi-Fi nodes (ESP8266, ESP32) and LoRaWAN nodes (Heltec LoRa32u4). Both families feed a common backend running on a repurposed older PC with Linux: an MQTT broker, a time-series database, dashboards and a home-automation layer. New nodes, sensors and data flows can be added to the shared platform. Each team member contributed an independent node implementation.
 
+### Scope of this repository
+This repository contains the documentation and the device-side work that team members uploaded. The backend stack (MQTT broker, InfluxDB, Telegraf, Grafana, Node-RED flows and the TTN integration) ran on the faculty's DEI-LED server; its live configuration stays there and was not exported, so those folders hold setup notes rather than deployable configs. Some per-member implementations are partial because not every member uploaded their final files.
+
+| Part | Status in this repository |
+|---|---|
+| ESPHome IR/sensor node and air-conditioning control (Elías Álvarez) | Complete: configs, automations and docs |
+| Python/Arduino IR and ultrasonic scripts (Matías, Elías) | Complete |
+| Docker stack and perfume dispenser (Erick Wu) | Configs with secrets replaced by placeholders |
+| LoRa nodes (Joel Cañete, Tania) | Partial: sketches and notes as uploaded |
+| MQTT, InfluxDB, Telegraf, Grafana, Node-RED, TTN backend | Setup documentation only; deployed on the DEI-LED server |
+
 ### Highlights
 - Hybrid architecture: Wi-Fi nodes publish to a local Mosquitto broker; LoRaWAN nodes reach The Things Network (TTN) and are consumed over TTN's MQTT interface.
 - Backend stack: Mosquitto (MQTT), Telegraf, InfluxDB, Grafana, Node-RED, Home Assistant and ESPHome, deployed with Docker.
@@ -106,6 +117,9 @@ Este proyecto combina sensado y actuación en una red IoT híbrida con dos tecno
 - Nodo LoRaWAN con servo (cortina) y válvula según humedad, con downlinks desde Home Assistant; un Arduino secundario maneja los servos porque la placa LoRa no soporta LMIC y Servo a la vez.
 - Nodo dispensador de perfumes (ESP8266) con tópicos MQTT de estado/comando, control por bot de Telegram y selección automática de broker según la red.
 - Documentación por componente (en español) y tres guías paso a paso en `docs/`.
+
+### Alcance de este repositorio
+Este repositorio contiene la documentación y el trabajo de dispositivos que subieron los integrantes. El backend (broker MQTT, InfluxDB, Telegraf, Grafana, flujos de Node-RED e integración con TTN) corrió en el servidor DEI-LED de la facultad; su configuración en uso quedó allí y no se exportó, por lo que esas carpetas contienen notas de instalación y no configuraciones desplegables. Algunas implementaciones individuales están incompletas porque no todos los integrantes subieron sus archivos finales.
 
 ### Arquitectura, hardware y estructura
 Ver el diagrama (imagen y mermaid), la tabla de hardware y el árbol del repositorio en la sección en inglés. Las carpetas `Implementaciones/` contienen el trabajo de cada integrante.
