@@ -14,9 +14,9 @@ This repository contains the documentation and the device-side work that team me
 | Part | Status in this repository |
 |---|---|
 | ESPHome IR/sensor node and air-conditioning control (Elías Álvarez) | Complete: configs, automations and docs |
-| Python/Arduino IR and ultrasonic scripts (Matías, Elías) | Complete |
+| Python/Arduino IR and ultrasonic scripts (Matías Franco, Elías Álvarez) | Complete |
 | Docker stack and perfume dispenser (Erick Wu) | Configs with secrets replaced by placeholders |
-| LoRa nodes (Joel Cañete, Tania) | Partial: sketches and notes as uploaded |
+| LoRa nodes (Joel Cañete, Tania Romero) | Partial: sketches and notes as uploaded |
 | MQTT, InfluxDB, Telegraf, Grafana, Node-RED, TTN backend | Setup documentation only; deployed on the DEI-LED server |
 
 ### Highlights
@@ -124,9 +124,9 @@ Este repositorio contiene la documentación y el trabajo de dispositivos que sub
 | Parte | Estado en este repositorio |
 |---|---|
 | Nodo IR/sensores ESPHome y control de aire acondicionado (Elías Álvarez) | Completo: configuraciones, automatizaciones y documentación |
-| Scripts IR y ultrasónicos en Python/Arduino (Matías, Elías) | Completo |
+| Scripts IR y ultrasónicos en Python/Arduino (Matías Franco, Elías Álvarez) | Completo |
 | Stack Docker y dispensador de perfume (Erick Wu) | Configuraciones con secretos reemplazados por marcadores |
-| Nodos LoRa (Joel Cañete, Tania) | Parcial: sketches y notas tal como fueron cargados |
+| Nodos LoRa (Joel Cañete, Tania Romero) | Parcial: sketches y notas tal como fueron cargados |
 | Backend MQTT, InfluxDB, Telegraf, Grafana, Node-RED, TTN | Solo documentación de instalación; desplegado en el servidor DEI-LED |
 
 ### Arquitectura del sistema
@@ -200,7 +200,7 @@ Los secretos (credenciales Wi-Fi, claves TTN, tokens, IPs de servidores) fueron 
 - Automatizaciones de encendido/apagado del aire acondicionado en Home Assistant (`homeassistant/Control_de_AACC/Automations/`).
 
 ### Equipo y créditos
-Desarrollado por Elías David Álvarez Martínez (nodo ESP32 con sensores/IR, control del aire acondicionado, scripts), Matías (nodo virtual ESP8266, sensor ultrasónico y scripts IR), Erick Wu (stack Docker, dispensador de perfume, guía paso a paso), Víctor Joel Cañete Barboza (nodo LoRaWAN LDR/DHT11/IR, guía) y Tania (nodo LoRaWAN de humedad/servo/válvula, guía) en la Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, con Eng. Fernando Brunetti, PhD, como asesor.
+Desarrollado por Elías David Álvarez Martínez (nodo ESP32 con sensores/IR, control del aire acondicionado, scripts), Matías Franco (nodo virtual ESP8266, sensor ultrasónico y scripts IR), Erick Wu (stack Docker, dispensador de perfume, guía paso a paso), Víctor Joel Cañete Barboza (nodo LoRaWAN LDR/DHT11/IR, guía) y Tania Romero (nodo LoRaWAN de humedad/servo/válvula, guía) en la Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, con el Ing. Fernando Brunetti, PhD, como asesor.
 
 ### Licencia
 MIT. Las guías técnicas y figuras se comparten como referencia.
