@@ -6,7 +6,7 @@
 ## English
 
 ### Overview
-This project builds a hybrid IoT network that integrates sensing and actuation over two radio technologies: Wi-Fi nodes (ESP8266, ESP32) and LoRaWAN nodes (Heltec LoRa32u4). Both families feed a common backend running on a repurposed older PC with Linux: an MQTT broker, a time-series database, dashboards and a home-automation layer. The platform is designed as a reusable base on which new nodes, sensors and data flows can be added. Each team member contributed an independent node implementation on top of it.
+This project combines sensing and actuation in a hybrid IoT network with two radio technologies: Wi-Fi nodes (ESP8266, ESP32) and LoRaWAN nodes (Heltec LoRa32u4). Both families feed a common backend running on a repurposed older PC with Linux: an MQTT broker, a time-series database, dashboards and a home-automation layer. New nodes, sensors and data flows can be added to the shared platform. Each team member contributed an independent node implementation.
 
 ### Highlights
 - Hybrid architecture: Wi-Fi nodes publish to a local Mosquitto broker; LoRaWAN nodes reach The Things Network (TTN) and are consumed over TTN's MQTT interface.
@@ -97,7 +97,7 @@ MIT. Technical guides and figures are shared for reference.
 ## Español
 
 ### Descripción general
-Este proyecto construye una red IoT híbrida que integra sensado y actuación sobre dos tecnologías de radio: nodos Wi-Fi (ESP8266, ESP32) y nodos LoRaWAN (Heltec LoRa32u4). Ambas familias alimentan un backend común sobre una PC reutilizada con Linux: broker MQTT, base de datos de series temporales, dashboards y capa de automatización. La plataforma es una base reutilizable donde se pueden agregar nodos, sensores y flujos de datos. Cada integrante aportó una implementación de nodo independiente.
+Este proyecto combina sensado y actuación en una red IoT híbrida con dos tecnologías de radio: nodos Wi-Fi (ESP8266, ESP32) y nodos LoRaWAN (Heltec LoRa32u4). Ambas familias alimentan un backend común sobre una PC reutilizada con Linux: broker MQTT, base de datos de series temporales, dashboards y capa de automatización. La plataforma admite nuevos nodos, sensores y flujos de datos. Cada integrante aportó una implementación de nodo independiente.
 
 ### Puntos destacados
 - Arquitectura híbrida: los nodos Wi-Fi publican a un broker Mosquitto local; los nodos LoRaWAN llegan a The Things Network (TTN) y se consumen por su interfaz MQTT.
