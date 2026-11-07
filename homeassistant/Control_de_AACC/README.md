@@ -6,7 +6,7 @@ Para lograr el control remoto de un aire acondicionado marca Tokyo, se decidió 
 
 En una primera etapa, utilizamos un receptor infrarrojo modelo TL1838, conectado a un Arduino Uno. Para garantizar un funcionamiento correcto del sensor, se siguieron las recomendaciones especificadas en el datasheet del TL1838, implementando el circuito acondicionador correspondiente, incluyendo la correcta alimentación, desacople y conexión de salida del receptor.
 
-<img width="892" height="317" alt="ir_receiver_circuit" src="https://github.com/user-attachments/assets/6297fcb5-ada0-406f-b198-8f8015558512" />
+<img width="892" height="317" alt="ir_receiver_circuit" src="../../docs/img/attachments/6297fcb5-ada0-406f-b198-8f8015558512.png" />
 
 
 Posteriormente, mediante el Arduino IDE, se desarrolló un programa que permitió capturar los pulsos infrarrojos emitidos por el control remoto original del aire acondicionado. El programa fue configurado para medir los tiempos de encendido y apagado de la señal (pulsos raw) y mostrarlos por el monitor serial, expresados en microsegundos. De esta forma, fue posible observar y registrar la secuencia completa de la señal infrarroja asociada al comando de encendido/apagado del equipo.
@@ -64,9 +64,9 @@ switch:
 En la etapa final, se empleó un ESP32 junto con un módulo transmisor infrarrojo, configurado mediante ESPHome para reproducir la señal infrarroja capturada previamente. La transmisión se realizó utilizando el método transmit_raw, permitiendo emitir exactamente la misma secuencia de pulsos registrada desde el control original. De esta manera, se logró el encendido y apagado del aire acondicionado Tokyo de forma confiable.
 
 
-![IMG_3996](https://github.com/user-attachments/assets/90e64cca-4caa-4659-a6e3-4d83fdfc1165)
+![IMG_3996](../../docs/img/attachments/90e64cca-4caa-4659-a6e3-4d83fdfc1165.jpg)
 
-![IMG_3996](https://github.com/user-attachments/assets/9cd6e67e-edf9-4156-bf52-66763c45bedc)
+![IMG_3996](../../docs/img/attachments/9cd6e67e-edf9-4156-bf52-66763c45bedc.jpg)
 
 
 

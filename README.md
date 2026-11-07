@@ -17,7 +17,7 @@ This project combines sensing and actuation in a hybrid IoT network with two rad
 - Documentation per component (MQTT, InfluxDB, Grafana, Node-RED, Home Assistant, ESPHome, TTN, LoRa), written in Spanish, plus three step-by-step guides in `docs/`.
 
 ### System architecture
-<p align="center"><img src="https://github.com/user-attachments/assets/e3828d64-0867-454a-92f0-b70719c93680" width="720" alt="System architecture"></p>
+<p align="center"><img src="docs/img/attachments/e3828d64-0867-454a-92f0-b70719c93680.png" width="720" alt="System architecture"></p>
 
 ```mermaid
 flowchart LR
@@ -87,7 +87,7 @@ Secrets (Wi-Fi credentials, TTN keys, bot tokens, server IPs) were removed from 
 - Air-conditioner on/off automations in Home Assistant (`homeassistant/Control_de_AACC/Automations/`).
 
 ### Team & credits
-Developed by Elías David Álvarez Martínez (ESP32 sensor/IR node, AC control, scripts), Matías (ESP8266 virtual node, ultrasonic sensor and IR scripts), Erick Wu (Docker stack, perfume dispenser, step-by-step guide), Víctor Joel Cañete Barboza (LoRaWAN LDR/DHT11/IR node, guide) and Tania (LoRaWAN humidity/servo/valve node, guide) at Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, with Prof. Fernando Brunetti as advisor.
+Developed by Elías David Álvarez Martínez (ESP32 sensor/IR node, AC control, scripts), Matías (ESP8266 virtual node, ultrasonic sensor and IR scripts), Erick Wu (Docker stack, perfume dispenser, step-by-step guide), Víctor Joel Cañete Barboza (LoRaWAN LDR/DHT11/IR node, guide) and Tania (LoRaWAN humidity/servo/valve node, guide) at Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, with Prof. Eng. Fernando Brunetti, PhD, as advisor.
 
 ### License
 MIT. Technical guides and figures are shared for reference.
@@ -123,7 +123,7 @@ Los secretos (credenciales Wi-Fi, claves TTN, tokens, IPs de servidores) fueron 
 Dashboard de Node-RED alimentado por uplinks de TTN y automatizaciones de encendido/apagado de aire acondicionado en Home Assistant (carpetas `NodeRed/` y `homeassistant/`).
 
 ### Equipo y créditos
-Desarrollado por Elías David Álvarez Martínez, Matías, Erick Wu, Víctor Joel Cañete Barboza y Tania en la Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, con el Prof. Fernando Brunetti como asesor.
+Desarrollado por Elías David Álvarez Martínez, Matías, Erick Wu, Víctor Joel Cañete Barboza y Tania en la Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, con el Prof. Ing. Fernando Brunetti, PhD, como asesor.
 
 ### Licencia
 MIT. Las guías técnicas y figuras se comparten como referencia.

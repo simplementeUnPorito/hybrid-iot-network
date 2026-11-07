@@ -175,7 +175,7 @@ INFO Starting dashboard web server on http://0.0.0.0:XXXX
 
 Donde **XXXX** es el número de puerto que está usando el servidor (generalmente 6052).
 
-<img width="1099" height="365" alt="ESPHome_parte1" src="https://github.com/user-attachments/assets/fb834b0a-fccb-4fb0-8914-2321eaf66ee5" />
+<img width="1099" height="365" alt="ESPHome_parte1" src="../docs/img/attachments/fb834b0a-fccb-4fb0-8914-2321eaf66ee5.png" />
 
 ### Abrir el Dashboard en el navegador
 
@@ -185,7 +185,7 @@ Abrir el navegador web y acceder a la dirección de loopback (127.0.0.1) utiliza
 http://127.0.0.1:XXXX
 ```
 
-<img width="1161" height="452" alt="ESPHome_parte2" src="https://github.com/user-attachments/assets/a69cd185-ed11-4c6f-a58c-9c84d967f256" />
+<img width="1161" height="452" alt="ESPHome_parte2" src="../docs/img/attachments/a69cd185-ed11-4c6f-a58c-9c84d967f256.png" />
 
 
 **Nota:** El servidor escucha en la IP general `0.0.0.0`, pero se accede localmente utilizando la dirección reservada `127.0.0.1` (localhost) junto con el número de puerto indicado por la consola.
@@ -205,10 +205,10 @@ http://127.0.0.1:XXXX
 1. Hacer click en el botón **+ NEW DEVICE**
 2. Click en **New Device Setup**
 
-<img width="1918" height="878" alt="ESPHome_parte3" src="https://github.com/user-attachments/assets/5b2c4dc4-5bab-49e7-8d74-2ba85a325aa3" />
+<img width="1918" height="878" alt="ESPHome_parte3" src="../docs/img/attachments/5b2c4dc4-5bab-49e7-8d74-2ba85a325aa3.png" />
 
 
-<img width="517" height="498" alt="ESPHome_parte4" src="https://github.com/user-attachments/assets/39944593-9b37-4759-80dd-3b6a0812f498" />
+<img width="517" height="498" alt="ESPHome_parte4" src="../docs/img/attachments/39944593-9b37-4759-80dd-3b6a0812f498.png" />
 
 
 Ingresar los detalles solicitados:
@@ -224,7 +224,7 @@ Ingresar los detalles solicitados:
 Luego aparece una ventana con el mensaje:  
 **“How do you want to install nodo-virtual.yaml on your device?”**
 
-<img width="712" height="572" alt="esphome_part7" src="https://github.com/user-attachments/assets/e15dfce5-fb36-425e-bb08-fc7398f35e98" />
+<img width="712" height="572" alt="esphome_part7" src="../docs/img/attachments/e15dfce5-fb36-425e-bb08-fc7398f35e98.png" />
 
 
 Por el momento, seleccionar **CANCEL**.
@@ -232,7 +232,7 @@ Por el momento, seleccionar **CANCEL**.
 En el Dashboard de ESPHome, hacer click en **EDIT**, lo que abre el archivo de código YAML.
 
 
-<img width="1261" height="347" alt="ESPHome_parte5" src="https://github.com/user-attachments/assets/9493c8ea-9dfb-4246-a979-bcf038bc7e1c" />
+<img width="1261" height="347" alt="ESPHome_parte5" src="../docs/img/attachments/9493c8ea-9dfb-4246-a979-bcf038bc7e1c.png" />
 
 
 En la sección de Wi-Fi, asegurarse de que esté configurada de la siguiente manera:
@@ -291,7 +291,7 @@ interval:
 Luego, en la esquina superior derecha, hacer click en **SAVE** y luego en **INSTALL**.
 
 
-<img width="1918" height="470" alt="ESPHome_parte6" src="https://github.com/user-attachments/assets/735435bb-d384-419c-8b63-f5471b3d49ab" />
+<img width="1918" height="470" alt="ESPHome_parte6" src="../docs/img/attachments/735435bb-d384-419c-8b63-f5471b3d49ab.png" />
 
 
 Vuelve a aparecer la ventana:  
@@ -300,7 +300,7 @@ Vuelve a aparecer la ventana:
 Seleccionar **Manual Download**.
 
 
-<img width="713" height="577" alt="ESPHome_parte7" src="https://github.com/user-attachments/assets/ccd6ffd5-c16e-47cb-a47f-e88c912dba4c" />
+<img width="713" height="577" alt="ESPHome_parte7" src="../docs/img/attachments/ccd6ffd5-c16e-47cb-a47f-e88c912dba4c.png" />
 
 
 ---
@@ -334,7 +334,7 @@ Volviendo al segundo **INSTALL**, esperar a que termine el proceso.
 Si no hay ningún problema, se descargará un archivo `.bin` (en este caso, `nodo-virtual.bin`).
 
 
-<img width="1748" height="762" alt="ESPHome_parte8" src="https://github.com/user-attachments/assets/f33c8bda-12c4-479b-a4eb-b4c1b9f552ea" />
+<img width="1748" height="762" alt="ESPHome_parte8" src="../docs/img/attachments/f33c8bda-12c4-479b-a4eb-b4c1b9f552ea.png" />
 
 
 En una nueva pestaña del navegador, ir a:  
@@ -344,15 +344,15 @@ Conectar el ESP a la computadora.
 Hacer click en **CONNECT** y seleccionar el puerto al que está conectado el ESP.
 
 
-<img width="1507" height="577" alt="ESPHome_parte9" src="https://github.com/user-attachments/assets/2ad88cd0-e2ea-4b72-95a7-6998c64490b0" />
+<img width="1507" height="577" alt="ESPHome_parte9" src="../docs/img/attachments/2ad88cd0-e2ea-4b72-95a7-6998c64490b0.png" />
 
 
 En la sección **ESP Device**, hacer click en **INSTALL**, seleccionar el archivo `.bin` (`nodo-virtual.bin`) y luego click en **INSTALL**.
 
 
-<img width="736" height="257" alt="ESPHome_parte10" src="https://github.com/user-attachments/assets/b005f58c-fd03-4b36-9cd4-8f5fa72c7671" />
+<img width="736" height="257" alt="ESPHome_parte10" src="../docs/img/attachments/b005f58c-fd03-4b36-9cd4-8f5fa72c7671.png" />
 
-<img width="612" height="613" alt="ESPHome_parte11" src="https://github.com/user-attachments/assets/1faf694b-577e-424c-bb47-6556a4c55099" />
+<img width="612" height="613" alt="ESPHome_parte11" src="../docs/img/attachments/1faf694b-577e-424c-bb47-6556a4c55099.png" />
 
 
 Esperar a que finalice la instalación.
@@ -368,7 +368,7 @@ Si todo salió correctamente, el Dashboard de ESPHome most
 El proceso de grabar un nuevo archivo .yaml desde el dashboard del navegador se basa en la tecnología OTA (Over-The-Air), la cual permite actualizar el firmware del ESP8266 a través de la red Wi-Fi sin necesidad de una conexión física por USB. Cuando se presiona el botón "Install" y se selecciona la opción inalámbrica, el dashboard compila el código en un archivo binario y lo envía al dispositivo mediante un puerto de red específico (por defecto el 8266). El firmware actual del dispositivo recibe estos datos, los almacena temporalmente en una sección libre de su memoria flash y, tras verificar que el archivo es correcto, reinicia el sistema para ejecutar la nueva versión del código de forma inmediata.
 
 
-<img width="727" height="576" alt="esphome_part8" src="https://github.com/user-attachments/assets/7b6a3f5f-0034-4883-9775-5b09e47f9b3c" />
+<img width="727" height="576" alt="esphome_part8" src="../docs/img/attachments/7b6a3f5f-0034-4883-9775-5b09e47f9b3c.png" />
 
 
 

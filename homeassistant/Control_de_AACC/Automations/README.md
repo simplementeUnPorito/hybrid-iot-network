@@ -9,22 +9,22 @@ La intención principal fue crear un sistema de pruebas utilizando un **sensor d
 El primer paso consiste en navegar por el menú lateral para iniciar la configuración:
 * Ir a **Settings** (Ajustes).
 
-  <img width="362" height="816" alt="HA_auto_part1" src="https://github.com/user-attachments/assets/74b2e084-afd3-4632-b076-623a63cc8d80" />
+  <img width="362" height="816" alt="HA_auto_part1" src="../../../docs/img/attachments/74b2e084-afd3-4632-b076-623a63cc8d80.png" />
 
 * Seleccionar **Automations & scenes** (Automatizaciones y escenas).
-  <img width="1159" height="486" alt="HA_auto_part2" src="https://github.com/user-attachments/assets/17159cbf-082a-4271-87af-51c3165a4af0" />
+  <img width="1159" height="486" alt="HA_auto_part2" src="../../../docs/img/attachments/17159cbf-082a-4271-87af-51c3165a4af0.png" />
 
 * Pulsar el botón **+ Create automation** (+ Crear automatización).
-  <img width="1146" height="903" alt="HA_auto_part3" src="https://github.com/user-attachments/assets/a0491327-1d86-46ae-b700-00d7823f5119" />
+  <img width="1146" height="903" alt="HA_auto_part3" src="../../../docs/img/attachments/a0491327-1d86-46ae-b700-00d7823f5119.png" />
 
 * Elegir la opción **Create new automation** (Crear nueva automatización).
-  <img width="665" height="438" alt="HA_auto_part5" src="https://github.com/user-attachments/assets/a1fdf9b3-4e72-4100-ab18-78931f375b13" />
+  <img width="665" height="438" alt="HA_auto_part5" src="../../../docs/img/attachments/a1fdf9b3-4e72-4100-ab18-78931f375b13.png" />
 
 
 ## 2. Interfaz de Nueva Automatización
 Una vez seleccionada la opción anterior, se presenta la ventana de configuración donde definiremos disparadores, condiciones y acciones:
 
-<img width="1577" height="882" alt="HA_auto_part4" src="https://github.com/user-attachments/assets/145fd05a-3e0a-4d1e-adc3-03b16737d669" />
+<img width="1577" height="882" alt="HA_auto_part4" src="../../../docs/img/attachments/145fd05a-3e0a-4d1e-adc3-03b16737d669.png" />
 
 
 
@@ -33,7 +33,7 @@ En esta ventana, procedemos a definir qué evento iniciará la acción:
 * Pulsar en **Add Trigger** (Añadir disparador).
 * En el buscador, escribir y seleccionar **Numeric state** (Estado numérico).
 
-<img width="952" height="353" alt="HA_auto_part6" src="https://github.com/user-attachments/assets/4584fcea-6a5f-4776-b160-b1975bb955ed" />
+<img width="952" height="353" alt="HA_auto_part6" src="../../../docs/img/attachments/4584fcea-6a5f-4776-b160-b1975bb955ed.png" />
 
 ### Configuración del Trigger en ambas automatizaciones
 Para lograr el control del clima, se configuraron dos automatizaciones en este trabajo con parámetros específicos basados en el sensor virtual:
@@ -63,11 +63,11 @@ Esto significa que la automatización se ejecutará si **cualquiera** de los eve
 Antes de configurar las condiciones, es necesario crear un interruptor virtual que nos permita habilitar o deshabilitar todo el sistema de automatización de forma manual.
 
 A. Ir a **Settings** (Ajustes) > **Devices & Services** (Dispositivos y Servicios).
-<img width="1201" height="387" alt="HA_boton1" src="https://github.com/user-attachments/assets/1392aeb9-81d9-474b-9b55-816f6efae226" />
+<img width="1201" height="387" alt="HA_boton1" src="../../../docs/img/attachments/1392aeb9-81d9-474b-9b55-816f6efae226.png" />
 
    
 B. Seleccionar la pestaña **Helpers** (Ayudantes) en la parte superior.
-<img width="1575" height="888" alt="HA_boton2" src="https://github.com/user-attachments/assets/33275fc6-905f-45ad-98b3-e08525708c83" />
+<img width="1575" height="888" alt="HA_boton2" src="../../../docs/img/attachments/33275fc6-905f-45ad-98b3-e08525708c83.png" />
 
 
 C. Pulsar en **+ Create Helper** y elegir la opción **Toggle** (Interruptor).
@@ -80,7 +80,7 @@ Para evitar que el aire se encienda o apague solo cuando no lo deseamos, añadim
 
 En el buscador de condiciones, escribimos **State** (Estado) y configuramos lo siguiente para ambas automatizaciones (ON y OFF):
 
-<img width="967" height="442" alt="HA_auto_part7" src="https://github.com/user-attachments/assets/d5692953-0841-44e8-852a-abd688a40691" />
+<img width="967" height="442" alt="HA_auto_part7" src="../../../docs/img/attachments/d5692953-0841-44e8-852a-abd688a40691.png" />
 
 
 * **Entity**: `input_boolean.control_automatico_aire` (el helper creado anteriormente).
@@ -99,7 +99,7 @@ Para ambas automatizaciones, el procedimiento fue el siguiente:
 * Pulsar en **Add Action** (Añadir acción).
 * Seleccionar la opción **Device** (Dispositivo).
 
-<img width="1300" height="487" alt="HA_auto_part8" src="https://github.com/user-attachments/assets/c3851c73-568f-4f62-8e06-030d46990bdc" />
+<img width="1300" height="487" alt="HA_auto_part8" src="../../../docs/img/attachments/c3851c73-568f-4f62-8e06-030d46990bdc.png" />
 
 
 * **Device**: Seleccionar el dispositivo **ESP32** (el cual tiene conectado el módulo transmisor IR).
@@ -122,7 +122,7 @@ Para que la lógica entre en funcionamiento, es indispensable verificar que las 
 * Ir a **Settings** > **Automations & scenes**.
 * En la lista de automatizaciones, el **State** (Estado) de ambas (`AC-ON Automation` y `AC-OFF Automation`) debe estar en **ON** (activado). 
 
-<img width="1577" height="478" alt="HA_auto_part12" src="https://github.com/user-attachments/assets/451aa9a0-2cee-478d-aea6-1561bef4da70" />
+<img width="1577" height="478" alt="HA_auto_part12" src="../../../docs/img/attachments/451aa9a0-2cee-478d-aea6-1561bef4da70.png" />
 
 
 > **Importante**: Si el interruptor en esta sección está apagado, la automatización no escuchará al sensor de temperatura ni enviará señales al ESP32, independientemente de cómo esté configurado el botón de "Control Automático".
