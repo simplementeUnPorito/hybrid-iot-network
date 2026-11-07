@@ -121,23 +121,86 @@ Este proyecto combina sensado y actuación en una red IoT híbrida con dos tecno
 ### Alcance de este repositorio
 Este repositorio contiene la documentación y el trabajo de dispositivos que subieron los integrantes. El backend (broker MQTT, InfluxDB, Telegraf, Grafana, flujos de Node-RED e integración con TTN) corrió en el servidor DEI-LED de la facultad; su configuración en uso quedó allí y no se exportó, por lo que esas carpetas contienen notas de instalación y no configuraciones desplegables. Algunas implementaciones individuales están incompletas porque no todos los integrantes subieron sus archivos finales.
 
-### Arquitectura, hardware y estructura
-Ver el diagrama (imagen y mermaid), la tabla de hardware y el árbol del repositorio en la sección en inglés. Las carpetas `Implementaciones/` contienen el trabajo de cada integrante.
+| Parte | Estado en este repositorio |
+|---|---|
+| Nodo IR/sensores ESPHome y control de aire acondicionado (Elías Álvarez) | Completo: configuraciones, automatizaciones y documentación |
+| Scripts IR y ultrasónicos en Python/Arduino (Matías, Elías) | Completo |
+| Stack Docker y dispensador de perfume (Erick Wu) | Configuraciones con secretos reemplazados por marcadores |
+| Nodos LoRa (Joel Cañete, Tania) | Parcial: sketches y notas tal como fueron cargados |
+| Backend MQTT, InfluxDB, Telegraf, Grafana, Node-RED, TTN | Solo documentación de instalación; desplegado en el servidor DEI-LED |
+
+### Arquitectura del sistema
+<p align="center"><img src="docs/img/attachments/e3828d64-0867-454a-92f0-b70719c93680.png" width="720" alt="Arquitectura del sistema"></p>
+
+```mermaid
+flowchart LR
+  subgraph WiFi[Nodos Wi-Fi]
+    E32[ESP32 + DHT22 + LDR + IR]
+    E82[Nodos ESP8266]
+  end
+  subgraph Lora[Nodos LoRaWAN]
+    L1[LoRa32u4 + LDR + DHT11 + IR]
+    L2[LoRa32u4 + humedad + LDR + servo/válvula]
+  end
+  L1 --> GW[Gateway LoRaWAN]
+  L2 --> GW
+  GW --> TTN[The Things Network]
+  E32 -->|MQTT| MQ[Mosquitto]
+  E82 -->|MQTT| MQ
+  TTN -->|Uplinks MQTT| NR[Node-RED]
+  TTN -->|Uplinks MQTT| TG[Telegraf]
+  MQ --> TG --> DB[(InfluxDB)] --> GF[Grafana]
+  MQ --> HA[Home Assistant]
+  NR --> HA
+  E32 <-->|API ESPHome| HA
+  HA -->|Downlink| TTN
+```
+
+### Hardware
+| Componente | Función |
+|---|---|
+| ESP32 (ESPHome) | Nodo Wi-Fi: DHT22, LDR, receptor IR (TL1838) y LED IR para controlar el aire acondicionado |
+| ESP8266 | Nodos Wi-Fi: sensor ultrasónico (HC-SR04), sketches de retransmisión IR, dispensador de perfume, nodo virtual ESPHome |
+| Heltec LoRa32u4 | Nodos LoRaWAN OTAA: LDR, DHT11, sensor IR de obstáculos, humedad, comandos de servo/válvula |
+| Arduino (esclavo) | Acciona los servos según los comandos del nodo LoRa |
+| Gateway LoRaWAN + TTN | Uplink/downlink de radio y servidor de red |
+| Servidor Linux (Docker) | Mosquitto, Telegraf, InfluxDB, Grafana, Node-RED, Home Assistant, ESPHome |
+
+### Estructura del repositorio
+```
+MQTT/            Notas del broker Mosquitto y comportamiento MQTT de TTN
+Telegraf/        Agente MQTT -> InfluxDB
+InfluxDB/        Base de datos de series temporales
+Grafana/         Dashboards
+NodeRed/         Integración basada en flujos (uplink TTN -> dashboard), capturas
+homeassistant/   Instalación de Home Assistant, automatizaciones del aire acondicionado, notas de downlink TTN
+esphome/         Guía ESPHome, secrets.example.yaml, configuraciones de nodos por integrante
+  Implementaciones/Elias     Nodo ESP32 con sensores + IR (aula_sensors)
+  Implementaciones/Erick     Docker compose, aprovisionamiento ESPHome y Grafana
+  Implementaciones/Matias    Nodo virtual de temperatura ESP8266
+LoRa/            Selección de hardware LoRa y nodos LoRaWAN por integrante
+  Implementaciones/Joel      Nodo LoRa32u4 con LDR + DHT11 + IR
+  Implementaciones/Tania     Nodo LoRa32u4 con servo/válvula + Arduino esclavo
+TTN/             Configuración de aplicación/dispositivo en The Things Network
+Scripts/         Herramientas auxiliares: calibración IR y Python (matias-elias), firmware del dispensador (erick)
+docs/            Guías paso a paso (PDF)
+```
 
 ### Puesta en marcha
 1. Preparar un servidor Linux con Docker y levantar el stack con `esphome/Implementaciones/Erick/docker-compose.yml`; ver `Scripts/erick/readme.md`.
 2. Copiar `esphome/secrets.example.yaml` a `esphome/secrets.yaml` y completarlo. Reemplazar cada `<PLACEHOLDER>` en los YAML y sketches (Wi-Fi, IP del broker, claves TTN, tokens).
 3. Cargar los nodos Wi-Fi con ESPHome (`esphome/README.md`) o con los sketches de `Scripts/`.
 4. Para los nodos LoRaWAN, registrar el dispositivo en TTN (`TTN/README.md`), colocar DevEUI y AppKey en el sketch de `LoRa/Implementaciones/` y cargarlo con Arduino IDE (LMIC).
-5. Conectar Node-RED o Telegraf a la interfaz MQTT de TTN con una API key.
+5. Conectar Node-RED o Telegraf a la interfaz MQTT de TTN con una API key (`NodeRed/README.md`, `MQTT/TTN-MQTT/README.md`).
 
 Los secretos (credenciales Wi-Fi, claves TTN, tokens, IPs de servidores) fueron eliminados de esta copia pública y reemplazados por marcadores.
 
 ### Resultados
-Dashboard de Node-RED alimentado por uplinks de TTN y automatizaciones de encendido/apagado de aire acondicionado en Home Assistant (carpetas `NodeRed/` y `homeassistant/`).
+- Dashboard de Node-RED alimentado por uplinks de TTN (`NodeRed/node-red-dashboard.jpg`, `NodeRed/node-red-esquema.jpg`).
+- Automatizaciones de encendido/apagado del aire acondicionado en Home Assistant (`homeassistant/Control_de_AACC/Automations/`).
 
 ### Equipo y créditos
-Desarrollado por Elías David Álvarez Martínez, Matías, Erick Wu, Víctor Joel Cañete Barboza y Tania en la Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, con el Ing. Fernando Brunetti, PhD, como asesor.
+Desarrollado por Elías David Álvarez Martínez (nodo ESP32 con sensores/IR, control del aire acondicionado, scripts), Matías (nodo virtual ESP8266, sensor ultrasónico y scripts IR), Erick Wu (stack Docker, dispensador de perfume, guía paso a paso), Víctor Joel Cañete Barboza (nodo LoRaWAN LDR/DHT11/IR, guía) y Tania (nodo LoRaWAN de humedad/servo/válvula, guía) en la Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2025, con Eng. Fernando Brunetti, PhD, como asesor.
 
 ### Licencia
 MIT. Las guías técnicas y figuras se comparten como referencia.
