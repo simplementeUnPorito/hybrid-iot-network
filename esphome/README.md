@@ -132,13 +132,13 @@ Es posible que aparezca un mensaje como el siguiente:
 
 ```text
 ERROR: To modify pip, please run the following command:
-C:\Users\FRANCO\AppData\Local\Programs\Python\Python312\python.exe -m pip install --upgrade pip setuptools
+<PYTHON_ROOT>\python.exe -m pip install --upgrade pip setuptools
 ```
 
-En ese caso, copiar y pegar exactamente el comando que indica el mensaje. Para este ejemplo:
+En ese caso, sustituir `<PYTHON_ROOT>` por la carpeta de instalación indicada en el mensaje y ejecutar:
 
 ```bash
-C:\Users\FRANCO\AppData\Local\Programs\Python\Python312\python.exe -m pip install --upgrade pip setuptools
+<PYTHON_ROOT>\python.exe -m pip install --upgrade pip setuptools
 ```
 
 Luego de que termine de instalar, ejecutar en PowerShell:

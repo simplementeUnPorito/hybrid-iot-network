@@ -64,7 +64,7 @@ Como consecuencia, las implementaciones LoRaWAN sobre ESP32 presentan comportami
 
 ### Justificación de la elección
 
-Aunque la Heltec WiFi LoRa 32 ofrece mayores prestaciones, su complejidad arquitectónica dificulta una implementación estable de LoRaWAN con TTN. En cambio, la LoRa32u4 II proporciona un entorno controlado y compatible con los supuestos del stack LMIC, resultando más adecuada para un trabajo práctico académico centrado en comunicaciones y redes LoRaWAN.
+Aunque la Heltec WiFi LoRa 32 ofrece mayores prestaciones, su complejidad arquitectónica dificulta una implementación estable de LoRaWAN con TTN. En cambio, la LoRa32u4 II proporciona un entorno controlado y compatible con los supuestos del stack LMIC, resultando más adecuada para esta implementación de ingeniería de comunicaciones y redes LoRaWAN.
 
 Por estas razones, se optó por utilizar la **LoRa32u4 II** como nodo LoRa del sistema.
 

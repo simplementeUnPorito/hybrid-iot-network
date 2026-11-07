@@ -33,7 +33,7 @@ captive_portal:
 # MQTT (publicación a Mosquitto)
 # =========================
 mqtt:
-  broker: !secret mqtt_broker   # ej: 192.168.1.50 o nombre docker si aplica en la red
+  broker: !secret mqtt_broker   # ej: <MQTT_BROKER_IP> o nombre Docker si aplica en la red
   port: 1883
   topic_prefix: "dispensador/perfumes"
   discovery: true
