@@ -64,9 +64,8 @@ switch:
 En la etapa final, se empleó un ESP32 junto con un módulo transmisor infrarrojo, configurado mediante ESPHome para reproducir la señal infrarroja capturada previamente. La transmisión se realizó utilizando el método transmit_raw, permitiendo emitir exactamente la misma secuencia de pulsos registrada desde el control original. De esta manera, se logró el encendido y apagado del aire acondicionado Tokyo de forma confiable.
 
 
-![IMG_3996](../../docs/img/attachments/90e64cca-4caa-4659-a6e3-4d83fdfc1165.jpg)
+![Air-conditioning controller installed on site](../../docs/img/attachments/90e64cca-4caa-4659-a6e3-4d83fdfc1165.jpg)
 
-![IMG_3996](../../docs/img/attachments/9cd6e67e-edf9-4156-bf52-66763c45bedc.jpg)
 
 
 
