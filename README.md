@@ -22,6 +22,7 @@ This repository contains the documentation and the device-side work that team me
 ### Highlights
 - Hybrid architecture: Wi-Fi nodes publish to a local Mosquitto broker; LoRaWAN nodes reach The Things Network (TTN) and are consumed over TTN's MQTT interface.
 - Backend stack: Mosquitto (MQTT), Telegraf, InfluxDB, Grafana, Node-RED, Home Assistant and ESPHome, deployed with Docker.
+- MQTT lab exercises also used HiveMQ. The deployed network used Mosquitto.
 - Remote air-conditioner control: IR codes captured in raw mode with a TL1838 receiver and re-emitted from an ESP32 through ESPHome (on/off at 24 C), triggered by Home Assistant automations.
 - LoRaWAN node with servo (curtain) and valve actuation driven by humidity, with downlinks sent from Home Assistant; a secondary Arduino drives the servos because the LoRa board cannot run LMIC and Servo together.
 - Wi-Fi perfume dispenser node (ESP8266) with MQTT status/command topics, Telegram bot control and automatic broker selection per network.
@@ -113,6 +114,7 @@ Este proyecto combina sensado y actuación en una red IoT híbrida con dos tecno
 ### Puntos destacados
 - Arquitectura híbrida: los nodos Wi-Fi publican a un broker Mosquitto local; los nodos LoRaWAN llegan a The Things Network (TTN) y se consumen por su interfaz MQTT.
 - Stack de backend: Mosquitto, Telegraf, InfluxDB, Grafana, Node-RED, Home Assistant y ESPHome, desplegado con Docker.
+- En las prácticas de MQTT también se usó HiveMQ. La red desplegada usó Mosquitto.
 - Control remoto de aire acondicionado: códigos IR capturados en modo raw con un receptor TL1838 y reemitidos desde un ESP32 con ESPHome (encendido/apagado a 24 C), activados por automatizaciones de Home Assistant.
 - Nodo LoRaWAN con servo (cortina) y válvula según humedad, con downlinks desde Home Assistant; un Arduino secundario maneja los servos porque la placa LoRa no soporta LMIC y Servo a la vez.
 - Nodo dispensador de perfumes (ESP8266) con tópicos MQTT de estado/comando, control por bot de Telegram y selección automática de broker según la red.
